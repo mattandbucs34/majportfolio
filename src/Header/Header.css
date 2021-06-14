@@ -44,7 +44,7 @@ header h4 {
   text-align: center;
 }
 
-.nav-container a, p {
+.nav-container a, .nav-container p {
   color: white;
   font-weight: 600;
   margin-right: 1rem;
@@ -133,7 +133,7 @@ header h4 {
           align-items: center;
 }
 
-@media screen and (max-width: 375px) {
+@media (max-width: 764px) {
   header {
     -webkit-box-align: center;
         -ms-flex-align: center;

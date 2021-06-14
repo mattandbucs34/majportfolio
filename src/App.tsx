@@ -17,23 +17,21 @@ function App() {
     <div className="container">
       <Router>
         <Header screenWidth={screenWidth} />
-          <main>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/node_express">
-              <NodeProjects />
-            </Route>
-            <Route path="/react_projects">
-              <ReactProjects />
-            </Route>
-            <Route path="/php_projects">
-              <PHPProjects />
-            </Route>
-            <Route path="/other_projects" >
-              <OtherProjects />
-            </Route>
-          </main>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/node_express">
+            <NodeProjects />
+          </Route>
+          <Route path="/react_projects">
+            <ReactProjects />
+          </Route>
+          <Route path="/php_projects">
+            <PHPProjects />
+          </Route>
+          <Route path="/other_projects" >
+            <OtherProjects />
+          </Route>
         <Footer />
       </Router>
     </div>
