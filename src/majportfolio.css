@@ -2,11 +2,18 @@
   outline: none;
 }
 
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
+  display: grid;
   width: 70rem;
-  position: relative;
   height: 100vh;
-  margin: 0 auto;
+  position: relative;
+  grid-template-rows: 6rem auto 4rem;
   -webkit-box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
 }
