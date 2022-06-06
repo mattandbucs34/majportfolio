@@ -27,12 +27,12 @@ const ReactProjects = () => {
   }
 
   return (
-    <React.Fragment>
+    <div className='body'>
       <div className="project-list-title">
         <h3>React Projects</h3>
       </div>
       {displayProjects()}
-    </React.Fragment>
+    </div>
   )
 }
 
