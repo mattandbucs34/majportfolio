@@ -1,3 +1,7 @@
+.home-main {
+  overflow-y: auto
+}
+
 .home-main .profile-img-container {
   display: -webkit-box;
   display: -ms-flexbox;
