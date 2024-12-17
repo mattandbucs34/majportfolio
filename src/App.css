@@ -1,0 +1,111 @@
+*:focus {
+  outline: none;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  min-width: 100dvw;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.container {
+  display: grid;
+  width: 70rem;
+  height: 100vh;
+  position: relative;
+  grid-template-rows: 6rem auto 4rem;
+  -webkit-box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.project-list-title h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 6rem;
+  width: 100%;
+}
+
+.project-container:first-of-type {
+  border-top: 1px solid black;
+}
+
+.project-container:nth-of-type(2n) {
+  background-color: #ecffec;
+}
+
+a.project-container {
+  text-decoration: none;
+}
+
+a.project-container:visited {
+  color: black;
+}
+
+.project-row {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 7rem auto;
+      grid-template-columns: 7rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.project-row .thumbnail-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 7rem;
+  border-right: 1px solid;
+  color: black;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-row .thumbnail-container .thumbnail {
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.project-row .thumbnail-container img {
+  max-width: 100%;
+}
+
+.project-row .project-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: unset;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}

@@ -1,0 +1,257 @@
+header {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    background-color: #0a500a;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  header h4 {
+    -webkit-margin-before: 0px;
+            margin-block-start: 0px;
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
+    font-size: 2rem;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-container a {
+    text-decoration: none;
+  }
+  
+  .nav-container {
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 2rem;
+  }
+  
+  .nav-container .nav-menu-item {
+    width: 6rem;
+    text-align: center;
+  }
+  
+  .nav-container a, .nav-container p {
+    color: white;
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+  
+  .folio-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 1rem;
+  }
+  
+  .list-no-bullets {
+    list-style-type: none;
+    position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-padding-start: 0px;
+            padding-inline-start: 0px;
+    -webkit-margin-before: 0px;
+            margin-block-start: 0px;
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  
+  .list-no-bullets li {
+    height: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #3b943b;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    border-bottom: 1px solid black;
+  }
+  
+  .list-no-bullets li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    color: black;
+    height: 100%;
+    width: 100%;
+    margin-right: 0;
+    margin: 0 1rem;
+  }
+  
+  .list-no-bullets ul li a {
+    text-decoration: none;
+  }
+  
+  .list-no-bullets ul li a:visited {
+    color: black;
+  }
+  
+  .project-menu-nav:hover {
+    cursor: pointer;
+  }
+  
+  .project-menu-nav p svg {
+    margin-left: 0.5rem;
+  }
+  
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  @media (max-width: 764px) {
+    header {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 2.5rem;
+    }
+    header h4 {
+      -webkit-margin-before: 0px;
+              margin-block-start: 0px;
+      -webkit-margin-after: 0px;
+              margin-block-end: 0px;
+      font-size: unset;
+    }
+    .header-nav {
+      display: unset;
+      -webkit-box-align: unset;
+          -ms-flex-align: unset;
+              align-items: unset;
+    }
+    .folio-logo {
+      width: 7rem;
+    }
+    .nav-container {
+      position: absolute;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: 2.5rem auto;
+          grid-template-rows: 2.5rem auto;
+      width: 100%;
+      margin-left: unset;
+    }
+    .nav-container a, p {
+      color: black;
+      margin-right: 1rem;
+    }
+    nav.header-nav {
+      display: none;
+    }
+    nav.header-nav.show {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: (3rem)[2];
+          grid-template-rows: repeat(2, 3rem);
+      position: relative;
+      top: 100%;
+      text-align: right;
+      margin-top: 3.5rem;
+      -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+              box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+    }
+    nav.header-nav.show ul.list-no-bullets {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: (3rem)[4];
+          grid-template-rows: repeat(4, 3rem);
+      width: 100%;
+      -webkit-padding-start: unset;
+              padding-inline-start: unset;
+      -webkit-margin-before: 0px;
+              margin-block-start: 0px;
+      -webkit-margin-after: 0px;
+              margin-block-end: 0px;
+      background-color: #3b943b;
+      -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+              box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+    }
+    nav.header-nav.show li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border: 1px solid black;
+      border-top: none;
+    }
+    nav.header-nav.show li:first-of-type {
+      border-top: 1px solid black;
+    }
+    nav.header-nav.show li a {
+      margin-left: 1rem;
+      height: 100%;
+      width: 100%;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 0;
+      margin-right: 1rem;
+    }
+    .hamburger:active {
+      -webkit-transform: translateY(2px);
+              transform: translateY(2px);
+    }
+    .nav-container .nav-menu-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      background-color: #b5cab5;
+      border: 1px solid black;
+      border-top: none;
+      width: unset;
+      text-align: unset;
+    }
+  }
+  /*# sourceMappingURL=Header.css.map */

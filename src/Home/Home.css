@@ -1,0 +1,57 @@
+.home-main {
+    overflow-y: auto
+  }
+  
+  .home-main .profile-img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .home-main .profile-img {
+    width: 15rem;
+    max-height: 15rem;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+    margin-left: 1rem;
+  }
+  
+  .home-main p,
+  .home-main .education {
+    margin: 1rem 1.5rem;
+  }
+  
+  @media (max-width: 500px) {
+    .home-main .profile-img-container {
+      display: -ms-grid;
+      display: grid;
+    }
+    .home-main .profile-img-container .profile-img {
+      width: 10rem;
+      margin: 0 auto;
+    }
+    .home-main .profile-img-container section h3 {
+      margin-left: 1.5rem;
+    }
+    .home-main .education {
+      margin: 0 auto 3rem 1.5rem;
+    }
+    .home-main .education p {
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .home-main {
+      overflow-y: auto;
+    }
+    .home-main .profile-img-container {
+      margin-top: 1.5rem;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  }
+  /*# sourceMappingURL=Home.css.map */
