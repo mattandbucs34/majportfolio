@@ -1,4 +1,4 @@
-import { IProjectType } from "../interfaces/IProjects";
+import { IProjectType } from "../../interfaces/IProjects";
 import ToDoPNG from '../../assets/images/php-to-do-list.png';
 import PHPQuotes from '../../assets/images/php-quotes.png';
 import Zippys from '../../assets/images/zippys.png';

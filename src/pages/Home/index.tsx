@@ -1,6 +1,6 @@
-import './Home.css';
+import './index.css';
 import React from 'react';
-import profile from '../assets/profile.png';
+import profile from '../../assets/profile.png';
 
 
 const Home = () => {

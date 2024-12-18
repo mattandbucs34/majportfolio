@@ -1,6 +1,6 @@
 import BloccitPNG from '../../assets/images/bloccit.png'
 import MattPedia from '../../assets/images/matt-a-pedia.png';
-import { IProjectType } from '../interfaces/IProjects';
+import { IProjectType } from '../../interfaces/IProjects';
 
 export const node_projects: IProjectType[] = [
   {

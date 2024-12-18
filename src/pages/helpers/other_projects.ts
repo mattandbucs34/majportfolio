@@ -1,4 +1,4 @@
-import { IProjectType } from "../interfaces/IProjects";
+import { IProjectType } from "../../interfaces/IProjects";
 import OpenWeatherPNG from '../../assets/images/open_weather.png';
 
 export const other_projects: IProjectType[] = [

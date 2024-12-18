@@ -1,17 +1,17 @@
 import React from 'react';
-import { other_projects } from '../helpers/other_projects';
-import { IProjectType } from '../interfaces/IProjects';
+import { react_projects } from '../helpers/react_projects';
+import { IProjectType } from '../../interfaces/IProjects';
 
-const OtherProjects = () => {
+const ReactProjects = () => {
   function displayProjects() {
-    return other_projects.map((project: IProjectType) => {
+    return react_projects.map((project: IProjectType) => {
       return (
         <React.Fragment>
           <a className="project-container" href={project.href} target="_blank" rel="noreferrer">
             <div className="project-row">
               <div className="thumbnail-container">
                 <div className="thumbnail">
-                  <img src={project.imagePath} alt={project.alt}/>
+                  <img src={project.imagePath} alt={project.alt} />
                 </div>
               </div>
               <div className="project-title-container">
@@ -22,18 +22,18 @@ const OtherProjects = () => {
             </div>
           </a>
         </React.Fragment>
-      )
-    })
+      );
+    });
   }
 
   return (
-    <React.Fragment>
+    <div className='body'>
       <div className="project-list-title">
-        <h3>Other Projects</h3>
+        <h3>React Projects</h3>
       </div>
       {displayProjects()}
-    </React.Fragment>
-  )
-}
+    </div>
+  );
+};
 
-export default OtherProjects;
+export default ReactProjects;

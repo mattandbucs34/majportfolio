@@ -1,4 +1,4 @@
-import { IProjectType } from "../interfaces/IProjects";
+import { IProjectType } from "../../interfaces/IProjects";
 import BlocJams from '../../assets/images/bloc_jams.png';
 
 export const react_projects: IProjectType[] = [

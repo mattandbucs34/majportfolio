@@ -1,5 +1,5 @@
 import React from 'react';
-import { IProjectType } from '../interfaces/IProjects';
+import { IProjectType } from '../../interfaces/IProjects';
 import { node_projects } from '../helpers/node_projects';
 
 
@@ -13,7 +13,7 @@ const NodeProjects = () => {
             <div className="project-row">
               <div className="thumbnail-container">
                 <div className="thumbnail">
-                  <img src={project.imagePath} alt={project.alt}/>
+                  <img src={project.imagePath} alt={project.alt} />
                 </div>
               </div>
               <div className="project-title-container">
@@ -24,8 +24,8 @@ const NodeProjects = () => {
             </div>
           </a>
         </React.Fragment>
-      )
-    })
+      );
+    });
   }
 
   return (
@@ -35,7 +35,7 @@ const NodeProjects = () => {
       </div>
       {displayProjects()}
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default NodeProjects;
