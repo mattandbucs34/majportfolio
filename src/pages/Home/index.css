@@ -29,7 +29,7 @@
       display: grid;
     }
     .home-main .profile-img-container .profile-img {
-      width: 10rem;
+      max-width: 10rem;
       margin: 0 auto;
     }
     .home-main .profile-img-container section h3 {

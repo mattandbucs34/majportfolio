@@ -3,7 +3,6 @@ header {
     display: -ms-inline-flexbox;
     display: inline-flex;
     position: relative;
-    background-color: #0a500a;
     -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
             box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
     color: white;

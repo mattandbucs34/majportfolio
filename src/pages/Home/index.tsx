@@ -6,11 +6,11 @@ import profile from '../../assets/profile.png';
 const Home = () => {
   return (
     <React.Fragment>
-      <main className="home-main">
+      <main className={'home-main flex grow'} style={{flexFlow: 'column'}}>
         <div className="profile-img-container">
-          <img className="profile-img" src={profile} alt="profile" />
-          <section>
-            <h3>A Bit About Me</h3>
+          <img className={'profile-img'} src={profile} alt="profile" />
+          <section className={'mt-6 '}>
+            <h3>A Bit About Me:</h3>
             <p>
               I am a software developer with 5 years of experience specializing in frontend development using React. I’m also well-versed in Python development, with expertise in the Django ORM. Knowledge of the full-stack enables me to build seamless, full-stack applications. Currently, I work at U.S. News and World Report, where I develop and maintain multiple applications that provide feature content to site visitors. Previously, I contributed to innovative software projects at CPaT Global, where I honed my skills in modern development frameworks to provide a scalable learning managment software application.
             </p>

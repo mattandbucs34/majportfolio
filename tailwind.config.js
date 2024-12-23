@@ -16,7 +16,10 @@ export default {
     extend: {
       transitionProperty: {
         'max-height': 'max-height',
-      }
+      },
+      fontFamily: {
+        'global': ['Montserrat', 'Roboto Flex', 'Helvetica Neue', 'Arial', 'sans-serif'],
+      },
     },
   },
   plugins: [],

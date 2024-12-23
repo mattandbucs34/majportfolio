@@ -9,11 +9,9 @@ import PHPProjects from './pages/php-projects';
 import OtherProjects from './pages/other-projects';
 
 function App() {
-  const screenWidth: number = window.screen.width;
-  console.log('Doing something!');
   return (
-    <div className="container">
-      <Header screenWidth={screenWidth} />
+    <div className={'container h-full font-global'}>
+      <Header />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/node_express" element={<NodeProjects />} />

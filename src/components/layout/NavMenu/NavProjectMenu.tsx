@@ -1,16 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 
-// type NavProjectMenuType = {
-//   setIsNavShown(boolean: boolean): void
-// }
-
 const NavProjectMenu = () => {
-  // const {setIsNavShown} = props;
 
   return (
     <React.Fragment>
-      <ul className={'flex flex-col absolute top-full left-0 list-none w-28 bg-green-700 shadow-md shadow-emerald-950 max-h-0 overflow-hidden group-hover:max-h-64 transition-max-height'}>
+      <ul className={'flex flex-col absolute top-full right-0 list-none w-28 bg-green-700 shadow-md shadow-emerald-950 max-h-0 overflow-hidden group-hover:max-h-64 transition-max-height divide-y'}>
         <li className={'flex h-16 border-solid border-y border-y-green-950'}>
           <NavLink
             to="/node_express"
