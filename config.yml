@@ -1,5 +1,5 @@
 branch-defaults:
-  main:
+  master:
     environment: majportfolio-env
 environment-defaults:
   majportfolio-env:
@@ -7,6 +7,7 @@ environment-defaults:
     repository: null
 global:
   application_name: majportfolio
+  default_environment: majportfolio-env
   default_ec2_keyname: null
   default_platform: Docker running on 64bit Amazon Linux 2023
   default_region: us-east-1
