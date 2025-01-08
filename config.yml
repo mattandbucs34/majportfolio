@@ -16,4 +16,5 @@ global:
   platform_version: null
   profile: null
   sc: git
+  repository: https://github.com/mattandbucs34/majportfolio.git
   workspace_type: Application
