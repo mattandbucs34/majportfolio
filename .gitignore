@@ -32,3 +32,6 @@ build/*
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+/.agent/
+.agent/*
