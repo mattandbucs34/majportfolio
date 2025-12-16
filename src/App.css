@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100dvh;
-  min-width: 100dvw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 p {
@@ -21,7 +21,7 @@ p {
   width: 100%;
   position: relative;
   -webkit-box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .project-list-title h3 {
@@ -58,10 +58,10 @@ a.project-container:visited {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 7rem auto;
-      grid-template-columns: 7rem auto;
+  grid-template-columns: 7rem auto;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-bottom: 1px solid black;
 }
 
@@ -74,11 +74,11 @@ a.project-container:visited {
   color: black;
   height: 100%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .project-row .thumbnail-container .thumbnail {
@@ -95,16 +95,16 @@ a.project-container:visited {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
   .container {
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 }

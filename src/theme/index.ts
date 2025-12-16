@@ -61,7 +61,7 @@ const gradients = {
 
 const baseThemeConfig = {
     shape: {
-        borderRadius: 4,
+        borderRadius: 6,
     },
     breakpoints: {
         values: {

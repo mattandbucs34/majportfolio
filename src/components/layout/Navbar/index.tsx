@@ -20,7 +20,16 @@ const Navbar = () => {
 	return (
 		<AppBar position={'sticky'}>
 			<Toolbar>
-				<Typography variant={'h2'} flexGrow={1}>Matthew A Johnson Portfolio</Typography>
+				<Stack direction={'row'} spacing={2} alignItems={'center'} flexGrow={1}>
+					<img
+						src={'/jamzone_logo.png'}
+						alt={'Jamzone Logo'}
+						style={{ height: '100%', maxHeight: '4rem' }}
+					/>
+					<Typography variant={'h2'} flexGrow={1}>
+						Matthew A Johnson Portfolio
+					</Typography>
+				</Stack>
 				<Stack direction={'row'} spacing={2}>
 					<Button>Home</Button>
 					<Box>
