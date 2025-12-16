@@ -32,6 +32,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Manrope';
 	src: url('/fonts/Manrope-Bold.woff2');
@@ -44,4 +45,32 @@
 	src: url('/fonts/Inter-VariableFont_opsz,wght.woff2');
 	font-weight: normal;
 	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nightmark';
+	src: url('/fonts/Nightmark-Regular.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nightmark';
+	src: url('/fonts/Nightmark-Bold.woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nightmark';
+	src: url('/fonts/Nightmark-Italic.woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Nightmark';
+	src: url('/fonts/Nightmark-BoldItalic.woff2');
+	font-weight: bold;
+	font-style: italic;
 }

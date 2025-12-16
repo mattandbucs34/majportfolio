@@ -16,15 +16,46 @@ const colors = {
     orange: {
         DEFAULT: '#F97316',
         '100': '#FB923C',
-        '200': '#FB8A33',
-        '300': '#FA8329',
-        '400': '#874EF0',
-        '500': '#FA7B20',
-        '600': '#F56C14',
-        '700': '#F26611',
-        '800': '#EE5F0F',
+        '200': '#F98B36',
+        '300': '#F78430',
+        '400': '#F57C2A',
+        '500': '#F37524',
+        '600': '#F06E1E',
+        '700': '#EE6718',
+        '800': '#EC5F12',
         '900': '#EA580C',
+    },
+    deepPurple: {
+        '500': '#4e1b9e',
+        '600': '#411686',
+        '700': '#35106f',
+        '800': '#290b59',
+        '900': '#1e0644',
+    },
+    orangeBronze: {
+        '500': '#cb4b09',
+        '600': '#ae3f06',
+        '700': '#913304',
+        '800': '#752803',
+        '900': '#5a1d02',
     }
+};
+
+const gradients = {
+    // Simple 2-stop gradients (faster, cleaner)
+    primary: 'linear-gradient(135deg, #7C3AED 0%, #F97316 100%)',
+    purple: 'linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%)',
+    orange: 'linear-gradient(135deg, #FB923C 0%, #F97316 100%)',
+    subtle: 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)',
+
+    deepPrimary: 'linear-gradient(135deg, #35106f 30%, #F78430 100%)',
+    deepSecondary: 'linear-gradient(135deg, #ae3f06 0%, #A78BFA 100%)',
+
+    // Multi-stop gradient (smooth, rich blend)
+    purpleOrangeBlend: 'linear-gradient(135deg, #5B21B6 0%, #90478D 33%, #C66C65 66%, #FB923C 100%)',
+
+    // Alternative - same colors, different angle
+    purpleOrangeBlendHorizontal: 'linear-gradient(90deg, #35106f 0%, #90478D 33%, #C66C65 66%, #FB923C 100%)',
 };
 
 
@@ -98,11 +129,16 @@ const baseThemeConfig = {
             fontSize: '0.875rem',
             lineHeight: 1.33,
         },
+        a: {
+            color: 'inherit',
+            textDecoration: 'none',
+        },
     },
 };
 
 export const darkTheme = createTheme({
     ...baseThemeConfig,
+    gradients,
     palette: {
         mode: 'dark',
         primary: {
@@ -132,6 +168,7 @@ export const darkTheme = createTheme({
 
 export const lightTheme = createTheme({
     ...baseThemeConfig,
+    gradients,
     palette: {
         mode: 'light',
         primary: {
@@ -163,11 +200,39 @@ declare module '@mui/material/styles' {
     interface Palette {
         purple: typeof colors.purple;
         orange: typeof colors.orange;
-        // gold: typeof colors.gold;
+        deepPurple: typeof colors.deepPurple;
+        orangeBronze: typeof colors.orangeBronze;
     }
     interface PaletteOptions {
         purple?: typeof colors.purple;
         orange?: typeof colors.orange;
-        // gold?: typeof colors.gold;
+        deepPurple?: typeof colors.deepPurple;
+        orangeBronze?: typeof colors.orangeBronze;
+    }
+
+    interface Theme {
+        gradients: {
+            primary: string;
+            purple: string;
+            orange: string;
+            subtle: string;
+            deepPrimary: string;
+            deepSecondary: string;
+            purpleOrangeBlend: string;
+            purpleOrangeBlendHorizontal: string;
+        };
+    }
+
+    interface ThemeOptions {
+        gradients: {
+            primary: string;
+            purple: string;
+            orange: string;
+            subtle: string;
+            deepPrimary: string;
+            deepSecondary: string;
+            purpleOrangeBlend: string;
+            purpleOrangeBlendHorizontal: string;
+        };
     }
 }
