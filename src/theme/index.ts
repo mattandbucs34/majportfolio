@@ -117,7 +117,7 @@ const baseThemeConfig = {
             fontWeight: 600,
         },
         h6: {
-            fontFamily: 'Poppins',
+            fontFamily: 'Manrope',
             fontSize: '0.875rem', // 14px
             fontWeight: 600,
         },
