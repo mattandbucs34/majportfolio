@@ -71,6 +71,17 @@ const MobileNav = ({ isMobileMenuOpen, handleDrawerToggle }: MobileNavProps) => 
 										<ListItem>
 											<Link
 												component={NavLink}
+												to={'/nextjs_projects'}
+												underline={'none'}
+												color={theme.palette.primary.main}
+												onClick={handleDrawerToggle}
+											>
+												<Typography>NextJS</Typography>
+											</Link>
+										</ListItem>
+										<ListItem>
+											<Link
+												component={NavLink}
 												to={'/react_projects'}
 												underline={'none'}
 												color={theme.palette.primary.main}
@@ -127,7 +138,7 @@ const MobileNav = ({ isMobileMenuOpen, handleDrawerToggle }: MobileNavProps) => 
 								<Typography>Skills</Typography>
 							</Link>
 						</ListItem>
-						<ListItem>
+						{/* <ListItem>
 							<Link
 								component={NavLink}
 								to={'/contact'}
@@ -137,7 +148,7 @@ const MobileNav = ({ isMobileMenuOpen, handleDrawerToggle }: MobileNavProps) => 
 							>
 								<Typography>Contact</Typography>
 							</Link>
-						</ListItem>
+						</ListItem> */}
 					</List>
 				</Stack>
 			</Drawer>

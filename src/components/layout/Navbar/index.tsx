@@ -81,6 +81,16 @@ const Navbar = () => {
 								<MenuItem onClick={() => setIsProjectsMenuOpen(false)}>
 									<Link
 										component={NavLink}
+										to={'/nextjs_projects'}
+										color={theme.palette.primary.main}
+										underline={'none'}
+									>
+										NextJS
+									</Link>
+								</MenuItem>
+								<MenuItem onClick={() => setIsProjectsMenuOpen(false)}>
+									<Link
+										component={NavLink}
 										to={'/react_projects'}
 										color={theme.palette.primary.main}
 										underline={'none'}

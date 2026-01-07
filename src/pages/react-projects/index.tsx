@@ -1,4 +1,5 @@
 import { Box, Card, CardContent, CardMedia, CardActionArea, Typography, Container, useTheme } from '@mui/material';
+import SEO from '../../components/common/SEO';
 import { react_projects } from '../helpers/react_projects';
 import { IProjectType } from '../../interfaces/IProjects';
 
@@ -46,6 +47,10 @@ const ReactProjects = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
+      <SEO 
+        title="React Projects" 
+        description="A showcase of frontend applications built with React, focusing on modern UI/UX and performance." 
+      />
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
           React Projects

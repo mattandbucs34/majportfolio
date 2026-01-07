@@ -9,6 +9,7 @@ import OtherProjects from './pages/other-projects';
 import Navbar from '@/components/layout/Navbar';
 import Skills from '@/pages/Skills';
 import Stack from '@mui/material/Stack';
+import NextJSProjects from '@/pages/NextJS';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/react_projects" element={<ReactProjects />} />
         <Route path="/php_projects" element={<PHPProjects />} />
         <Route path="/other_projects" element={<OtherProjects />} />
+        <Route path="/nextjs_projects" element={<NextJSProjects />} />
         <Route path="/skills" element={<Skills />} />
       </Routes>
       <Footer />

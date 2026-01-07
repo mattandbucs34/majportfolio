@@ -1,10 +1,15 @@
 import { Box, Typography, Avatar, Container, useTheme, Stack } from '@mui/material';
+import SEO from '../../components/common/SEO';
 
 const Home = () => {
   const theme = useTheme();
 
   return (
     <Container maxWidth="lg" sx={{ py: 4, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+      <SEO 
+        title="Home" 
+        description="Software developer with 7 years of experience specializing in React and Python. Currently working at U.S. News & World Report." 
+      />
       <Box 
         component="main" 
         sx={{ 

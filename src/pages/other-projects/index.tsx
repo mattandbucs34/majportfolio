@@ -1,4 +1,5 @@
 import { Box, Card, CardContent, CardMedia, CardActionArea, Typography, Container, useTheme } from '@mui/material';
+import SEO from '../../components/common/SEO';
 import { other_projects } from '../helpers/other_projects';
 import { IProjectType } from '../../interfaces/IProjects';
 
@@ -45,6 +46,10 @@ const OtherProjects = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
+      <SEO 
+        title="More Projects" 
+        description="A collection of various software projects highlighting a diverse range of technical skills and problem-solving approaches." 
+      />
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
           Other Projects

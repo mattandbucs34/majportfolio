@@ -1,4 +1,5 @@
 import { Box, Card, CardContent, CardMedia, CardActionArea, Typography, Container, useTheme } from '@mui/material';
+import SEO from '../../components/common/SEO';
 import { IProjectType } from '../../interfaces/IProjects';
 import { node_projects } from '../helpers/node_projects';
 
@@ -45,6 +46,10 @@ const NodeProjects = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
+      <SEO 
+        title="Node.js Projects" 
+        description="Backend and full-stack projects built using Node.js, Express, and modern server-side technologies." 
+      />
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
           Node.js and Express Projects

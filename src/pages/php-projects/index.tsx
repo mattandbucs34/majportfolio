@@ -1,4 +1,5 @@
 import { Box, Card, CardContent, CardMedia, CardActionArea, Typography, Container, useTheme } from '@mui/material';
+import SEO from '../../components/common/SEO';
 import { php_projects } from '../helpers/php_projects';
 import { IProjectType } from '../../interfaces/IProjects';
 
@@ -45,6 +46,10 @@ const PHPProjects = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
+      <SEO 
+        title="PHP Projects" 
+        description="Web applications and projects developed using PHP, showcasing server-side scripting and dynamic content management." 
+      />
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
           PHP Projects
