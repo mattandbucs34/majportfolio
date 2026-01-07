@@ -1,14 +1,12 @@
 import './index.css';
 import React from 'react';
-import profile from '../../assets/profile.png';
-
 
 const Home = () => {
   return (
     <React.Fragment>
-      <main className={'home-main flex grow'} style={{flexFlow: 'column'}}>
+      <main className={'home-main flex grow'} style={{ flexFlow: 'column' }}>
         <div className="profile-img-container">
-          <img className={'profile-img'} src={profile} alt="profile" />
+          <img className={'profile-img'} src={'/profile.png'} alt="profile" />
           <section className={'mt-6 '}>
             <h3>A Bit About Me:</h3>
             <p>
