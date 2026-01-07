@@ -1,30 +1,64 @@
-import './index.css';
-import React from 'react';
+import { Box, Typography, Avatar, Container, useTheme, Stack } from '@mui/material';
 
 const Home = () => {
+  const theme = useTheme();
+
   return (
-    <React.Fragment>
-      <main className={'home-main flex grow'} style={{ flexFlow: 'column' }}>
-        <div className="profile-img-container">
-          <img className={'profile-img'} src={'/profile.png'} alt="profile" />
-          <section className={'mt-6 '}>
-            <h3>A Bit About Me:</h3>
-            <p>
-              I am a software developer with 5 years of experience specializing in frontend development using React. I’m also well-versed in Python development, with expertise in the Django ORM. Knowledge of the full-stack enables me to build seamless, full-stack applications. Currently, I work at U.S. News and World Report, where I develop and maintain multiple applications that provide feature content to site visitors. Previously, I contributed to innovative software projects at CPaT Global, where I honed my skills in modern development frameworks to provide a scalable learning managment software application.
-            </p>
-            <p>
-              Before diving into the world of software development, I spent several years in accounting and finance as an assistant controller. This experience shaped my analytical mindset, attention to detail, and ability to manage complex processes — skills that continue to enhance my approach to development.
-            </p>
-            <p>
-              On top of my technical background, I bring a unique perspective as an NCAA Division I softball umpire, where adaptability and clear, quick decision-making are key. These qualities help me tackle challenges both on the field and in the world of development.
-            </p>
-            <p>
-              Whether you are a recruiter looking for a skilled developer or a client with a vision to bring to life, I would love to collaborate. Feel free to explore my work and reach out — I am excited to connect!
-            </p>
-          </section>
-        </div>
-      </main>
-    </React.Fragment>
+    <Container maxWidth="lg" sx={{ py: 4, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+      <Box 
+        component="main" 
+        sx={{ 
+          display: 'flex', 
+          flexDirection: { xs: 'column', md: 'row' }, 
+          gap: 4,
+          alignItems: { xs: 'center', md: 'flex-start' }
+        }}
+      >
+        <Avatar
+          alt="Matthew Johnson"
+          src="/profile.png"
+          sx={{
+            width: { xs: 180, md: 300 },
+            height: { xs: 180, md: 300 },
+            boxShadow: theme.shadows[10],
+            border: `4px solid ${theme.palette.secondary.main}`,
+          }}
+        />
+        
+        <Box sx={{ flex: 1 }}>
+          <Typography 
+            variant="h3" 
+            component="h1" 
+            gutterBottom 
+            sx={{ 
+              fontWeight: 700, 
+              color: theme.palette.primary.main,
+              textAlign: { xs: 'center', md: 'left' }
+            }}
+          >
+            A Bit About Me:
+          </Typography>
+          
+          <Stack spacing={2}>
+            <Typography variant="body1">
+              I am a software developer with 7 years of experience specializing in frontend development with React, complemented by strong backend expertise in Python and Django. My full-stack background allows me to build clean, scalable applications that balance performance, usability, and maintainability.
+            </Typography>
+            <Typography variant="body1">
+              Currently, I work at <b>U.S. News & World Report</b>, where I develop and maintain multiple production applications that deliver feature-driven content to millions of site visitors. Previously, I contributed to modern, scalable learning management software at <b>CPaT Global</b>, working with contemporary frameworks to support a growing user base.
+            </Typography>
+            <Typography variant="body1">
+              Before transitioning into software development, I spent several years in accounting and finance as an assistant controller. That experience sharpened my analytical thinking, attention to detail, and ability to manage complex systems—skills that directly inform how I design and build software today.
+            </Typography>
+            <Typography variant="body1">
+              Outside of tech, I am an NCAA Division I softball umpire, a role that demands adaptability, composure, and fast, decisive thinking. Those same traits guide how I approach problem-solving in development.
+            </Typography>
+            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+              If you are a recruiter seeking a dependable, thoughtful developer—or a client with an idea worth building—I would love to connect. Take a look at my work. I am open to talk!
+            </Typography>
+          </Stack>
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
