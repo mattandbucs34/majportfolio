@@ -52,10 +52,13 @@ const Navbar = () => {
 						</Typography>
 					</Stack>
 					<Stack direction={'row'} spacing={2} display={{ xs: 'none', md: 'flex' }}>
-						<Button>Home</Button>
+						<Link component={NavLink} to={'/'}>
+							<Button sx={{ color: theme.palette.purple['600'] }}>Home</Button>
+						</Link>
 						<Box>
 							<Button
 								ref={projectsButtonRef}
+								sx={{ color: theme.palette.purple['600'] }}
 								onClick={() => setIsProjectsMenuOpen(true)}
 							>
 								Projects
@@ -75,7 +78,7 @@ const Navbar = () => {
 									horizontal: 'right',
 								}}
 							>
-								<MenuItem color={theme.palette.primary.main}>
+								<MenuItem onClick={() => setIsProjectsMenuOpen(false)}>
 									<Link
 										component={NavLink}
 										to={'/react_projects'}
@@ -85,7 +88,7 @@ const Navbar = () => {
 										React
 									</Link>
 								</MenuItem>
-								<MenuItem>
+								<MenuItem onClick={() => setIsProjectsMenuOpen(false)}>
 									<Link
 										component={NavLink}
 										to={'/php_projects'}
@@ -95,7 +98,7 @@ const Navbar = () => {
 										PHP
 									</Link>
 								</MenuItem>
-								<MenuItem>
+								<MenuItem onClick={() => setIsProjectsMenuOpen(false)}>
 									<Link
 										component={NavLink}
 										to={'/node_express'}
@@ -105,7 +108,7 @@ const Navbar = () => {
 										Node.js and Express
 									</Link>
 								</MenuItem>
-								<MenuItem>
+								<MenuItem onClick={() => setIsProjectsMenuOpen(false)}>
 									<Link
 										component={NavLink}
 										to={'/other_projects'}
@@ -117,8 +120,12 @@ const Navbar = () => {
 								</MenuItem>
 							</Menu>
 						</Box>
-						<Button>Skills</Button>
-						<Button>Contact</Button>
+						<Link component={NavLink} to={'/skills'}>
+							<Button sx={{ color: theme.palette.purple['600'] }}>
+								Skills
+							</Button>
+						</Link>
+						{/* <Button sx={{ color: theme.palette.purple['600'] }}>Contact</Button> */}
 					</Stack>
 				</Toolbar>
 			</AppBar>

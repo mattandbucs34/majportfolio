@@ -7,10 +7,12 @@ import ReactProjects from './pages/react-projects';
 import PHPProjects from './pages/php-projects';
 import OtherProjects from './pages/other-projects';
 import Navbar from '@/components/layout/Navbar';
+import Skills from '@/pages/Skills';
+import Stack from '@mui/material/Stack';
 
 function App() {
   return (
-    <div className={'container h-full font-global'}>
+    <Stack height={'100%'} maxHeight={'100%'} className={'container h-full font-global'}>
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
@@ -18,9 +20,10 @@ function App() {
         <Route path="/react_projects" element={<ReactProjects />} />
         <Route path="/php_projects" element={<PHPProjects />} />
         <Route path="/other_projects" element={<OtherProjects />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
       <Footer />
-    </div>
+    </Stack>
   );
 }
 

@@ -1,34 +1,32 @@
 
 'use client';
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { darkTheme, lightTheme } from '@/theme';
 
 interface ThemeContextType {
 	isDarkMode: boolean;
-	toggleDarkMode: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode; }) {
 	const [isDarkMode, setIsDarkMode] = useState(
-		window.matchMedia('(prefers-color-scheme: dark)').matches ||
-		localStorage.getItem('theme-mode') === 'dark'
+		typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : false
 	);
 
-	const toggleDarkMode = (): void => {
-		setIsDarkMode((prev) => {
-			const newMode = !prev;
-			localStorage.setItem('theme-mode', newMode ? 'dark' : 'light');
-			return newMode;
-		});
-	};
+	useEffect(() => {
+		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		const handler = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+		
+		mediaQuery.addEventListener('change', handler);
+		return () => mediaQuery.removeEventListener('change', handler);
+	}, []);
 
 	return (
 		<MuiThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-			<ThemeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+			<ThemeContext.Provider value={{ isDarkMode }}>
 				{children}
 			</ThemeContext.Provider>
 		</MuiThemeProvider>

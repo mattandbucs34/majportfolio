@@ -1,61 +1,76 @@
 import { createTheme } from '@mui/material/styles';
 
-const colors = {
+// UT Austin Brand Colors
+const brand = {
     purple: {
-        DEFAULT: '#7C3AED',
-        '100': '#A78BFA',
-        '200': '#9C77F7',
-        '300': '#9263F4',
-        '400': '#874EF0',
-        '500': '#7C3AED',
-        '600': '#7434DF',
-        '700': '#6C2ED2',
-        '800': '#6327C4',
-        '900': '#5B21B6',
+        main: '#33006F',
+        dark: '#2A005C',
+        light: '#4A2A7A',
+        muted: '#9D7BD8', // For dark mode
     },
     orange: {
-        DEFAULT: '#F97316',
-        '100': '#FB923C',
-        '200': '#F98B36',
-        '300': '#F78430',
-        '400': '#F57C2A',
-        '500': '#F37524',
-        '600': '#F06E1E',
-        '700': '#EE6718',
-        '800': '#EC5F12',
-        '900': '#EA580C',
+        main: '#BF5700',
+        dark: '#9C4600',
+        light: '#D66B00',
+    },
+};
+
+export const colors = {
+    purple: {
+        DEFAULT: brand.purple.main,
+        '100': brand.purple.muted,
+        '200': '#8B5CF6',
+        '300': '#7C3AED',
+        '400': '#6B21A8',
+        '500': brand.purple.main,
+        '600': brand.purple.dark,
+        '700': '#250050',
+        '800': '#1F0042',
+        '900': '#1A0035',
+    },
+    orange: {
+        DEFAULT: brand.orange.main,
+        '100': '#FDBA74',
+        '200': '#FB923C',
+        '300': '#F97316',
+        '400': '#EA580C',
+        '500': brand.orange.main,
+        '600': brand.orange.dark,
+        '700': '#853D00',
+        '800': '#6E3300',
+        '900': '#572900',
     },
     deepPurple: {
-        '500': '#4e1b9e',
-        '600': '#411686',
-        '700': '#35106f',
-        '800': '#290b59',
-        '900': '#1e0644',
+        '500': brand.purple.main,
+        '600': brand.purple.dark,
+        '700': '#250050',
+        '800': '#1F0042',
+        '900': '#1A0035',
     },
     orangeBronze: {
-        '500': '#cb4b09',
-        '600': '#ae3f06',
-        '700': '#913304',
-        '800': '#752803',
-        '900': '#5a1d02',
+        '500': brand.orange.main,
+        '600': brand.orange.dark,
+        '700': '#853D00',
+        '800': '#6E3300',
+        '900': '#572900',
     }
 };
 
 const gradients = {
     // Simple 2-stop gradients (faster, cleaner)
-    primary: 'linear-gradient(135deg, #7C3AED 0%, #F97316 100%)',
-    purple: 'linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%)',
-    orange: 'linear-gradient(135deg, #FB923C 0%, #F97316 100%)',
+    primary: `linear-gradient(135deg, ${brand.purple.main} 0%, ${brand.orange.main} 100%)`,
+    purple: `linear-gradient(135deg, ${brand.purple.muted} 0%, ${brand.purple.main} 100%)`,
+    orange: `linear-gradient(135deg, ${brand.orange.light} 0%, ${brand.orange.main} 100%)`,
     subtle: 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)',
 
-    deepPrimary: 'linear-gradient(135deg, #35106f 30%, #F78430 100%)',
-    deepSecondary: 'linear-gradient(135deg, #ae3f06 0%, #A78BFA 100%)',
+    deepPrimary: `linear-gradient(135deg, ${brand.purple.dark} 30%, ${brand.orange.light} 100%)`,
+    deepSecondary: `linear-gradient(135deg, ${brand.orange.dark} 0%, ${brand.purple.muted} 100%)`,
 
-    // Multi-stop gradient (smooth, rich blend)
-    purpleOrangeBlend: 'linear-gradient(135deg, #5B21B6 0%, #90478D 33%, #C66C65 66%, #FB923C 100%)',
+    // Multi-stop gradient (smooth, rich blend) - UT Austin colors
+    purpleOrangeBlend: `linear-gradient(135deg, ${brand.purple.main} 0%, #7C3A6F 33%, #A04D33 66%, ${brand.orange.main} 100%)`,
 
     // Alternative - same colors, different angle
-    purpleOrangeBlendHorizontal: 'linear-gradient(90deg, #35106f 0%, #90478D 33%, #C66C65 66%, #FB923C 100%)',
+    purpleOrangeBlendHorizontal: `linear-gradient(90deg, ${brand.purple.main} 0%, #7C3A6F 33%, #A04D33 66%, ${brand.orange.main} 100%)`,
 };
 
 
@@ -134,6 +149,49 @@ const baseThemeConfig = {
             textDecoration: 'none',
         },
     },
+    components: {
+        MuiAppBar: {
+            styleOverrides: {
+                root: {
+                    background: `linear-gradient(135deg, ${brand.purple.main} 0%, #7C3A6F 33%, #B4705A  66%, #AC8360 100%)`,
+                    boxShadow: '0 4px 20px 0 rgba(0,0,0,0.12)',
+                    borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+                }
+            }
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: '8px',
+                    textTransform: 'none',
+                    fontWeight: 600,
+                    padding: '8px 20px',
+                },
+                containedPrimary: {
+                    background: gradients.primary,
+                    '&:hover': {
+                        background: gradients.primary,
+                        filter: 'brightness(1.1)',
+                    }
+                }
+            }
+        },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    borderRadius: '16px',
+                    boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    backdropFilter: 'blur(4px)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    transition: 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
+                    '&:hover': {
+                        transform: 'translateY(-4px)',
+                        boxShadow: '0 12px 48px 0 rgba(31, 38, 135, 0.15)',
+                    }
+                }
+            }
+        }
+    }
 };
 
 export const darkTheme = createTheme({
@@ -142,16 +200,16 @@ export const darkTheme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: '#A78BFA',
-            light: '#C4B5FD',
+            main: brand.purple.muted, // Softened purple for dark mode
+            light: '#B8A0E5',
             dark: '#8B5CF6',
-            contrastText: '#0F172A',
+            contrastText: '#FFFFFF',
         },
         secondary: {
-            main: '#FB923C',
-            light: '#FCD9BD',
-            dark: '#F97316',
-            contrastText: '#0F172A',
+            main: brand.orange.main,
+            light: brand.orange.light,
+            dark: brand.orange.dark,
+            contrastText: '#FFFFFF',
         },
         background: {
             default: '#0F172A',
@@ -163,6 +221,10 @@ export const darkTheme = createTheme({
             disabled: '#64748B',
         },
         divider: '#334155',
+        purple: colors.purple,
+        orange: colors.orange,
+        deepPurple: colors.deepPurple,
+        orangeBronze: colors.orangeBronze,
     },
 });
 
@@ -172,16 +234,16 @@ export const lightTheme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#7C3AED',
-            light: '#A78BFA',
-            dark: '#5B21B6',
-            contrastText: '#fff',
+            main: brand.purple.main,
+            light: brand.purple.light,
+            dark: brand.purple.dark,
+            contrastText: '#FFFFFF',
         },
         secondary: {
-            main: '#F97316',
-            light: '#FB923C',
-            dark: '#EA580C',
-            contrastText: '#fff',
+            main: brand.orange.main,
+            light: brand.orange.light,
+            dark: brand.orange.dark,
+            contrastText: '#FFFFFF',
         },
         background: {
             default: '#FAFAFA',
@@ -193,6 +255,10 @@ export const lightTheme = createTheme({
             disabled: '#9CA3AF',
         },
         divider: '#E5E7EB',
+        purple: colors.purple,
+        orange: colors.orange,
+        deepPurple: colors.deepPurple,
+        orangeBronze: colors.orangeBronze,
     },
 });
 

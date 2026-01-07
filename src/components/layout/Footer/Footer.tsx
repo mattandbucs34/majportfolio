@@ -1,30 +1,57 @@
-import './Footer.css';
-import React from 'react';
+import { Box, Typography, IconButton, Container, useTheme, Stack } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
-  return (
-    <React.Fragment>
-      <footer>
-        <div className="contacts-container">
-          {/* <a href="https://www.linkedin.com/in/mattandbucs" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faLinkedin} size="3x" />
-          </a>
-          <a href="https://twitter.com/matt_the_blue" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faTwitter} size="3x" />
-          </a>
-          <a href="https://github.com/mattandbucs34" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faGithub} size="3x" />
-          </a>
-          <a href="mailto:mattandbucs@gmail.com" target="blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faEnvelope} size="3x" />
-          </a> */}
-        </div>
-        <div className="copyright">
-          <p>&copy;{(new Date().getFullYear())} JAM Productions</p>
-        </div>
+  const theme = useTheme();
 
-      </footer>
-    </React.Fragment>
+  return (
+    <Box 
+      component="footer" 
+      sx={{ 
+        py: 4, 
+        mt: 'auto', 
+        bgcolor: 'background.paper',
+        borderTop: `1px solid ${theme.palette.divider}`,
+      }}
+    >
+      <Container maxWidth="lg">
+        <Stack spacing={2} alignItems="center">
+          <Stack direction="row" spacing={2}>
+            <IconButton 
+              href="https://www.linkedin.com/in/mattandbucs" 
+              target="_blank" 
+              rel="noreferrer"
+              color="primary"
+              sx={{ '&:hover': { color: theme.palette.secondary.main } }}
+            >
+              <LinkedInIcon fontSize="large" />
+            </IconButton>
+            <IconButton 
+              href="https://github.com/mattandbucs34" 
+              target="_blank" 
+              rel="noreferrer"
+              color="primary"
+              sx={{ '&:hover': { color: theme.palette.secondary.main } }}
+            >
+              <GitHubIcon fontSize="large" />
+            </IconButton>
+            <IconButton 
+              href="mailto:mattandbucs@gmail.com" 
+              color="primary"
+              sx={{ '&:hover': { color: theme.palette.secondary.main } }}
+            >
+              <EmailIcon fontSize="large" />
+            </IconButton>
+          </Stack>
+          
+          <Typography variant="body2" color="text.secondary">
+            &copy; {new Date().getFullYear()} JAM Productions. All rights reserved.
+          </Typography>
+        </Stack>
+      </Container>
+    </Box>
   );
 };
 
