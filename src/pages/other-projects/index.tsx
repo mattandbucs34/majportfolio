@@ -1,38 +1,63 @@
-import React from 'react';
+import { Box, Card, CardContent, CardMedia, CardActionArea, Typography, Container, useTheme } from '@mui/material';
+import SEO from '../../components/common/SEO';
 import { other_projects } from '../helpers/other_projects';
 import { IProjectType } from '../../interfaces/IProjects';
 
 const OtherProjects = () => {
+  const theme = useTheme();
+
   function displayProjects() {
-    return other_projects.map((project: IProjectType) => {
-      return (
-        <React.Fragment>
-          <a className="project-container" href={project.href} target="_blank" rel="noreferrer">
-            <div className="project-row">
-              <div className="thumbnail-container">
-                <div className="thumbnail">
-                  <img src={project.imagePath} alt={project.alt} />
-                </div>
-              </div>
-              <div className="project-title-container">
-                <div className="project-title">
+    return (
+      <Box 
+        sx={{ 
+          display: 'grid', 
+          gridTemplateColumns: { 
+            xs: '1fr', 
+            sm: 'repeat(2, 1fr)', 
+            md: 'repeat(3, 1fr)' 
+          }, 
+          gap: 4 
+        }}
+      >
+        {other_projects.map((project: IProjectType, index: number) => (
+          <Card key={index}>
+            <CardActionArea href={project.href} target="_blank" rel="noreferrer">
+              <CardMedia
+                component="img"
+                height="200"
+                image={project.imagePath}
+                alt={project.alt}
+                sx={{ objectFit: 'cover' }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 700 }}>
                   {project.projectName}
-                </div>
-              </div>
-            </div>
-          </a>
-        </React.Fragment>
-      );
-    });
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  View Project
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        ))}
+      </Box>
+    );
   }
 
   return (
-    <React.Fragment>
-      <div className="project-list-title">
-        <h3>Other Projects</h3>
-      </div>
+    <Container maxWidth="lg" sx={{ py: 6 }}>
+      <SEO 
+        title="More Projects" 
+        description="A collection of various software projects highlighting a diverse range of technical skills and problem-solving approaches." 
+      />
+      <Box sx={{ mb: 6, textAlign: 'center' }}>
+        <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
+          Other Projects
+        </Typography>
+        <Box sx={{ width: 80, height: 4, bgcolor: theme.palette.secondary.main, mx: 'auto', borderRadius: 2 }} />
+      </Box>
       {displayProjects()}
-    </React.Fragment>
+    </Container>
   );
 };
 

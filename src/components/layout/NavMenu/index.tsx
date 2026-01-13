@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router';
 import NavProjectMenu from './NavProjectMenu';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const NavMenu = () => {
 
@@ -10,7 +10,7 @@ const NavMenu = () => {
             <button
                 className={'sm:hidden absolute right-0 z-10 rounded-none bg-transparent border-none hover:bg-emerald-950 focus:outline-none peer/hamburger'}
             >
-                <FontAwesomeIcon icon={faBars} />
+                {/* <FontAwesomeIcon icon={faBars} /> */}
             </button>
             <nav className={`
                     max-h-0
@@ -34,7 +34,7 @@ const NavMenu = () => {
                     peer-focus/hamburger:max-h-32
                     peer-focus/hamburger:overflow-visible
                     `
-                }
+            }
             >
                 <NavLink
                     to={'/'}

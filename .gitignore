@@ -34,3 +34,4 @@ build/*
 !.elasticbeanstalk/*.global.yml
 
 /.agent/
+.agent/*
