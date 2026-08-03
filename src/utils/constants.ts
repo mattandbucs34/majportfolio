@@ -61,7 +61,7 @@ export const EXPERIENCE_ITEMS: IExperienceItem[] = [
       'Architect responsive frontend interfaces using React, TypeScript, and modern design systems.',
       'Build robust backend services and REST APIs using Python, Django, and PostgreSQL.',
     ],
-    skills: ['React', 'Python', 'Django', 'TypeScript', 'PostgreSQL', 'Next.js'],
+    skills: ['React', 'Python', 'Django', 'Java', 'PostgreSQL', 'AWS'],
   },
   {
     id: 'exp-cpat',
