@@ -122,6 +122,8 @@ export const SKILL_GROUPS: ISkillGroup[] = [
       { name: 'Payload CMS' },
       { name: 'PostgreSQL' },
       { name: 'REST APIs' },
+      { name: 'C#' },
+      { name: 'ASP.NET Core' },
     ],
   },
   {
