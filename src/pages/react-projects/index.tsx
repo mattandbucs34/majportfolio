@@ -21,19 +21,19 @@ const ReactProjects = () => {
       >
         {react_projects.map((project: IProjectType, index: number) => (
           <Card key={index}>
-            <CardActionArea href={project.href} target="_blank" rel="noreferrer">
+            <CardActionArea href={project.href} target={'_blank'} rel={'noreferrer'}>
               <CardMedia
-                component="img"
-                height="200"
+                component={'img'}
+                height={'200'}
                 image={project.imagePath}
                 alt={project.alt}
                 sx={{ objectFit: 'cover' }}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 700 }}>
+                <Typography gutterBottom variant={'h5'} component={'div'} sx={{ fontWeight: 700 }}>
                   {project.projectName}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant={'body2'} color={'text.secondary'}>
                   View Project
                 </Typography>
               </CardContent>
@@ -46,13 +46,13 @@ const ReactProjects = () => {
 
 
   return (
-    <Container maxWidth="lg" sx={{ py: 6 }}>
+    <Container maxWidth={'lg'} sx={{ py: 6 }}>
       <SEO 
-        title="React Projects" 
-        description="A showcase of frontend applications built with React, focusing on modern UI/UX and performance." 
+        title={'React Projects'} 
+        description={'A showcase of frontend applications built with React, focusing on modern UI/UX and performance.'} 
       />
       <Box sx={{ mb: 6, textAlign: 'center' }}>
-        <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
+        <Typography variant={'h2'} component={'h1'} gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
           React Projects
         </Typography>
         <Box 

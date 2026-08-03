@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <header className={'w-full bg-green-800 sm:h-24 min-h-11'}>
-        <div className="folio-logo">
+        <div className={'folio-logo'}>
           <h4>MAJ Portfolio</h4>
         </div>
         <NavMenu />

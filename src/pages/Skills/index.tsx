@@ -15,13 +15,13 @@ const SkillsPage = () => {
     const theme = useTheme();
 
     return (
-        <Container maxWidth='lg' sx={{ py: 6 }}>
+        <Container maxWidth={'lg'} sx={{ py: 6 }}>
             <SEO 
-                title='Skills' 
-                description='A comprehensive list of technical skills and technologies including React, Python, Django, AWS, and more.' 
+                title={'Skills'} 
+                description={'A comprehensive list of technical skills and technologies including React, Python, Django, AWS, and more.'} 
             />
             <Box sx={{ mb: 6, textAlign: 'center' }}>
-                <Typography variant='h2' component='h1' gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
+                <Typography variant={'h2'} component={'h1'} gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
                     Skills & Technologies
                 </Typography>
                 <Box sx={{ width: 80, height: 4, bgcolor: theme.palette.secondary.main, mx: 'auto', borderRadius: 2 }} />
@@ -56,7 +56,7 @@ const SkillsPage = () => {
                             }
                         }}
                     >
-                        <Typography variant='body1' sx={{ fontWeight: 500 }}>
+                        <Typography variant={'body1'} sx={{ fontWeight: 500 }}>
                             {skill}
                         </Typography>
                     </Paper>

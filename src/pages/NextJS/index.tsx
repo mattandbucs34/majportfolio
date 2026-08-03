@@ -25,38 +25,38 @@ const NextJSProjects = () => {
                 }}
             >
                 <Card>
-                    <CardActionArea href={'https://totalofficiating.org'} target='_blank' rel='noreferrer'>
+                    <CardActionArea href={'https://totalofficiating.org'} target={'_blank'} rel={'noreferrer'}>
                         <CardMedia
-                            component='img'
-                            height='200'
+                            component={'img'}
+                            height={'200'}
                             image={'/totalofficiating.png'}
                             alt={'Total Officiating'}
                             sx={{ objectFit: 'cover' }}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant='h5' component='div' sx={{ fontWeight: 700 }}>
+                            <Typography gutterBottom variant={'h5'} component={'div'} sx={{ fontWeight: 700 }}>
                                 {'Total Officiating'}
                             </Typography>
-                            <Typography variant='body2' color='text.secondary'>
+                            <Typography variant={'body2'} color={'text.secondary'}>
                                 View Project
                             </Typography>
                         </CardContent>
                     </CardActionArea>
                 </Card>
                 <Card>
-                    <CardActionArea href={'https://rightcallumpires.org'} target='_blank' rel='noreferrer'>
+                    <CardActionArea href={'https://rightcallumpires.org'} target={'_blank'} rel={'noreferrer'}>
                         <CardMedia
-                            component='img'
-                            height='200'
+                            component={'img'}
+                            height={'200'}
                             image={'/rightcallumpires.png'}
                             alt={'Right Call Umpires'}
                             sx={{ objectFit: 'cover' }}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant='h5' component='div' sx={{ fontWeight: 700 }}>
+                            <Typography gutterBottom variant={'h5'} component={'div'} sx={{ fontWeight: 700 }}>
                                 {'Right Call Umpires'}
                             </Typography>
-                            <Typography variant='body2' color='text.secondary'>
+                            <Typography variant={'body2'} color={'text.secondary'}>
                                 View Project
                             </Typography>
                         </CardContent>
@@ -66,13 +66,13 @@ const NextJSProjects = () => {
         );
     }
     return (
-        <Container maxWidth='lg' sx={{ py: 6 }}>
+        <Container maxWidth={'lg'} sx={{ py: 6 }}>
             <SEO
-                title='NextJS Projects'
-                description='Web applications and projects developed using NextJS, showcasing server-side scripting and dynamic content management.'
+                title={'NextJS Projects'}
+                description={'Web applications and projects developed using NextJS, showcasing server-side scripting and dynamic content management.'}
             />
             <Box sx={{ mb: 6, textAlign: 'center' }}>
-                <Typography variant='h2' component='h1' gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
+                <Typography variant={'h2'} component={'h1'} gutterBottom sx={{ fontWeight: 800, color: theme.palette.primary.main }}>
                     NextJS Projects
                 </Typography>
                 <Box sx={{ width: 80, height: 4, bgcolor: theme.palette.secondary.main, mx: 'auto', borderRadius: 2 }} />

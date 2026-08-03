@@ -9,13 +9,13 @@ interface SEOProps {
 
 const SEO = ({ 
   title, 
-  description = "Full-Stack Software Developer specializing in React and Python.", 
-  name = "Matthew A Johnson", 
-  type = "website" 
+  description = 'Full-Stack Software Developer specializing in React and Python.', 
+  name = 'Matthew A Johnson', 
+  type = 'website' 
 }: SEOProps) => {
   useEffect(() => {
     // Basic Title
-    const baseTitle = "Matthew A Johnson";
+    const baseTitle = 'Matthew A Johnson';
     document.title = title ? `${title} | ${baseTitle}` : `${baseTitle} | Full-Stack Developer`;
 
     // Description Meta

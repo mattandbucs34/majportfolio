@@ -4,15 +4,15 @@ import { IProjectType } from '../../interfaces/IProjects';
 
 export const node_projects: IProjectType[] = [
   {
-    projectName: "WhatsIt",
+    projectName: 'WhatsIt',
     imagePath: BloccitPNG,
-    alt: "Whats It Thumbnail",
-    href: "https://whatsit.majportfolio.com//"
+    alt: 'Whats It Thumbnail',
+    href: 'https://whatsit.majportfolio.com//'
   },
   {
-    projectName: "Matt-A-Pedia",
+    projectName: 'Matt-A-Pedia',
     imagePath: MattPedia,
-    alt: "Matt-a-Pedia Thumbnail",
-    href: "https://mattandbucs34-matt-a-pedia.herokuapp.com/"
+    alt: 'Matt-a-Pedia Thumbnail',
+    href: 'https://mattandbucs34-matt-a-pedia.herokuapp.com/'
   }
 ];

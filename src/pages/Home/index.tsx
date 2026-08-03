@@ -1,69 +1,141 @@
-import { Box, Typography, Avatar, Container, useTheme, Stack } from '@mui/material';
-import SEO from '../../components/common/SEO';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import DownloadIcon from '@mui/icons-material/Download';
+import { useTheme } from '@mui/material/styles';
+import SEO from '@/components/common/SEO';
+import Hero from '@/components/sections/Hero';
+import FeaturedProjects from '@/components/sections/FeaturedProjects';
+import ExperienceTimeline from '@/components/sections/ExperienceTimeline';
+import SkillsGrid from '@/components/sections/SkillsGrid';
+import { RESUME_S3_URL, LINKEDIN_URL, EMAIL_ADDRESS } from '@/utils/constants';
 
 const Home = () => {
   const theme = useTheme();
 
   return (
-    <Container maxWidth="lg" sx={{ py: 4, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-      <SEO 
-        title="Home" 
-        description="Software developer with 7 years of experience specializing in React and Python. Currently working at U.S. News & World Report." 
+    <Box component={'main'} sx={{ flexGrow: 1 }}>
+      <SEO
+        title={'Matthew A. Johnson | Senior Full-Stack Developer'}
+        description={
+          'Senior software developer with 7+ years of experience specializing in React, Next.js, Python, and Django. Currently working at U.S. News & World Report.'
+        }
       />
-      <Box 
-        component="main" 
-        sx={{ 
-          display: 'flex', 
-          flexDirection: { xs: 'column', md: 'row' }, 
-          gap: 4,
-          alignItems: { xs: 'center', md: 'flex-start' }
+
+      <Hero />
+      <FeaturedProjects />
+      <ExperienceTimeline />
+      <SkillsGrid />
+
+      {/* Contact & Resume CTA Section */}
+      <Box
+        component={'section'}
+        id={'contact'}
+        sx={{
+          py: { xs: 8, md: 10 },
+          bgcolor: theme.palette.primary.main,
+          color: '#FFFFFF',
         }}
       >
-        <Avatar
-          alt="Matthew Johnson"
-          src="/profile.png"
-          sx={{
-            width: { xs: 180, md: 300 },
-            height: { xs: 180, md: 300 },
-            boxShadow: theme.shadows[10],
-            border: `4px solid ${theme.palette.secondary.main}`,
-          }}
-        />
-        
-        <Box sx={{ flex: 1 }}>
-          <Typography 
-            variant="h3" 
-            component="h1" 
-            gutterBottom 
-            sx={{ 
-              fontWeight: 700, 
-              color: theme.palette.primary.main,
-              textAlign: { xs: 'center', md: 'left' }
+        <Container maxWidth={'md'}>
+          <Paper
+            elevation={0}
+            sx={{
+              p: { xs: 4, md: 6 },
+              borderRadius: 4,
+              textAlign: 'center',
+              bgcolor: 'rgba(0, 0, 0, 0.15)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              color: '#FFFFFF',
             }}
           >
-            A Bit About Me:
-          </Typography>
-          
-          <Stack spacing={2}>
-            <Typography variant="body1">
-              I am a software developer with 7 years of experience specializing in frontend development with React, complemented by strong backend expertise in Python and Django. My full-stack background allows me to build clean, scalable applications that balance performance, usability, and maintainability.
+            <Typography variant={'h2'} component={'h2'} gutterBottom sx={{ fontWeight: 800 }}>
+              {'Let’s Build Something Exceptional Together'}
             </Typography>
-            <Typography variant="body1">
-              Currently, I work at <b>U.S. News & World Report</b>, where I develop and maintain multiple production applications that deliver feature-driven content to millions of site visitors. Previously, I contributed to modern, scalable learning management software at <b>CPaT Global</b>, working with contemporary frameworks to support a growing user base.
+
+            <Typography variant={'body1'} sx={{ mb: 4, opacity: 0.95, maxWidth: 600, mx: 'auto' }}>
+              {
+                'Whether you are looking to collaborate on a full-stack Next.js project, discuss software architecture, or explore technical opportunities, I would love to connect.'
+              }
             </Typography>
-            <Typography variant="body1">
-              Before transitioning into software development, I spent several years in accounting and finance as an assistant controller. That experience sharpened my analytical thinking, attention to detail, and ability to manage complex systems—skills that directly inform how I design and build software today.
-            </Typography>
-            <Typography variant="body1">
-              Outside of tech, I am an NCAA Division I softball umpire, a role that demands adaptability, composure, and fast, decisive thinking. Those same traits guide how I approach problem-solving in development.
-            </Typography>
-            <Typography variant="body1" sx={{ fontWeight: 500 }}>
-              If you are a recruiter seeking a dependable, thoughtful developer—or a client with an idea worth building—I would love to connect. Take a look at my work. I am open to talk!
-            </Typography>
-          </Stack>
-        </Box>
+
+            <Stack
+              direction={{ xs: 'column', sm: 'row' }}
+              spacing={2}
+              justifyContent={'center'}
+            >
+              <Button
+                variant={'contained'}
+                size={'large'}
+                href={EMAIL_ADDRESS}
+                startIcon={<EmailIcon />}
+                sx={{
+                  bgcolor: '#FFFFFF',
+                  color: theme.palette.primary.main,
+                  fontWeight: 800,
+                  px: 4,
+                  py: 1.5,
+                  '&:hover': {
+                    bgcolor: '#F1F5F9',
+                  },
+                }}
+              >
+                {'Send Email'}
+              </Button>
+
+              <Button
+                variant={'outlined'}
+                size={'large'}
+                href={LINKEDIN_URL}
+                target={'_blank'}
+                rel={'noreferrer'}
+                startIcon={<LinkedInIcon />}
+                sx={{
+                  color: '#FFFFFF',
+                  borderColor: '#FFFFFF',
+                  fontWeight: 700,
+                  px: 3,
+                  py: 1.5,
+                  '&:hover': {
+                    borderColor: '#FFFFFF',
+                    bgcolor: 'rgba(255, 255, 255, 0.1)',
+                  },
+                }}
+              >
+                {'LinkedIn'}
+              </Button>
+
+              <Button
+                variant={'outlined'}
+                size={'large'}
+                href={RESUME_S3_URL}
+                target={'_blank'}
+                rel={'noreferrer'}
+                startIcon={<DownloadIcon />}
+                sx={{
+                  color: '#FFFFFF',
+                  borderColor: '#FFFFFF',
+                  fontWeight: 700,
+                  px: 3,
+                  py: 1.5,
+                  '&:hover': {
+                    borderColor: '#FFFFFF',
+                    bgcolor: 'rgba(255, 255, 255, 0.1)',
+                  },
+                }}
+              >
+                {'Resume'}
+              </Button>
+            </Stack>
+          </Paper>
+        </Container>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

@@ -7,26 +7,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+html, body {
   margin: 0;
-  display: flex;
-  font-family: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 a {
-  font-weight: 500;
-  color: #BF5700; /* UT Austin Burnt Orange */
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-  color: #D66B00;
+  color: inherit;
 }
 
 button {
@@ -36,17 +34,4 @@ button {
   font-size: 1em;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-  }
 }
