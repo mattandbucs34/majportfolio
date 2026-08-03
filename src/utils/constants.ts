@@ -129,7 +129,7 @@ export const SKILL_GROUPS: ISkillGroup[] = [
   {
     category: 'DevOps & Tools',
     skills: [
-      { name: 'AWS (S3)' },
+      { name: 'AWS (S3, EC2, Lightsail)' },
       { name: 'Git & GitHub' },
       { name: 'Stripe API' },
       { name: 'pnpm / npm' },
