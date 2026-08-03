@@ -73,7 +73,7 @@ export const EXPERIENCE_ITEMS: IExperienceItem[] = [
       'Contributed to scalable learning management software (LMS) serving aviation professionals worldwide.',
       'Designed reusable frontend UI components and optimized database query performance for large user bases.',
     ],
-    skills: ['React', 'JavaScript', 'Node.js', 'SQL', 'LMS Platforms'],
+    skills: ['React', 'Typescript', 'Postgres', 'C#', 'ASP.NET Core'],
   },
   {
     id: 'exp-finance',
