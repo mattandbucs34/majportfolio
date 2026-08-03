@@ -52,7 +52,7 @@ export const FEATURED_PROJECTS: IProjectType[] = [
 export const EXPERIENCE_ITEMS: IExperienceItem[] = [
   {
     id: 'exp-usnews',
-    role: 'Software Developer',
+    role: 'Senior Software Developer',
     company: 'U.S. News & World Report',
     period: '2021 - Present',
     type: 'work',

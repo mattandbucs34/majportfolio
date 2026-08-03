@@ -23,7 +23,7 @@ const Home = () => {
       <SEO
         title={'Matthew A. Johnson | Senior Full-Stack Developer'}
         description={
-          'Senior software developer with 7+ years of experience specializing in React, Next.js, Python, and Django. Currently working at U.S. News & World Report.'
+          'Senior Software Developer with 7+ years of experience specializing in React, Next.js, Python, and Django. Currently working at U.S. News & World Report.'
         }
       />
 

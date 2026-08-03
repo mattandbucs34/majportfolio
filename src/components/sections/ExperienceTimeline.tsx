@@ -35,6 +35,7 @@ const ExperienceTimeline = () => {
         py: { xs: 6, md: 10 },
         bgcolor: 'background.default',
         borderBottom: `1px solid ${theme.palette.divider}`,
+        overflow: 'hidden',
       }}
     >
       <Container maxWidth={'lg'}>
@@ -73,14 +74,15 @@ const ExperienceTimeline = () => {
               key={item.id}
               elevation={1}
               sx={{
-                p: { xs: 3, md: 4 },
+                p: { xs: 2.5, sm: 4 },
                 borderRadius: 3,
                 bgcolor: 'background.paper',
                 border: `1px solid ${theme.palette.divider}`,
-                borderLeft: `6px solid ${item.type === 'leadership'
+                borderLeft: `6px solid ${
+                  item.type === 'leadership'
                     ? theme.palette.secondary.main
                     : theme.palette.primary.main
-                  }`,
+                }`,
                 transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                 '&:hover': {
                   transform: 'translateY(-2px)',
@@ -89,18 +91,19 @@ const ExperienceTimeline = () => {
               }}
             >
               <Stack
-                direction={{ xs: 'column', sm: 'row' }}
+                direction={{ xs: 'column', md: 'row' }}
                 justifyContent={'space-between'}
-                alignItems={{ xs: 'flex-start', sm: 'center' }}
-                spacing={1}
+                alignItems={{ xs: 'flex-start', md: 'center' }}
+                spacing={1.5}
                 sx={{ mb: 2 }}
               >
-                <Stack direction={'row'} spacing={2} alignItems={'center'}>
+                <Stack direction={'row'} spacing={2} alignItems={'flex-start'}>
                   <Box
                     sx={{
                       width: 42,
                       height: 42,
                       borderRadius: '50%',
+                      flexShrink: 0,
                       bgcolor:
                         item.type === 'leadership'
                           ? theme.palette.secondary.main
@@ -108,6 +111,7 @@ const ExperienceTimeline = () => {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
+                      mt: 0.5,
                     }}
                   >
                     {getIcon(item.type)}
@@ -139,7 +143,12 @@ const ExperienceTimeline = () => {
                     fontWeight: 700,
                     bgcolor: theme.palette.action.hover,
                     color: theme.palette.text.primary,
-                    px: 1,
+                    maxWidth: '100%',
+                    px: 1.5,
+                    py: 0.5,
+                    alignSelf: { xs: 'flex-start', md: 'auto' },
+                    mt: { xs: 1, md: 0 },
+                    ml: { xs: 0, sm: '58px', md: 0 },
                   }}
                 />
               </Stack>

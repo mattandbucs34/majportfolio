@@ -95,12 +95,12 @@ const Resume = () => {
             {'Matthew A. Johnson'}
           </Typography>
           <Typography variant={'h6'} color={'secondary.main'} sx={{ fontWeight: 700, mb: 2 }}>
-            {'Software Developer @ U.S. News & World Report'}
+            {'Senior Software Developer @ U.S. News & World Report'}
           </Typography>
 
           <Typography variant={'body1'} paragraph color={'text.secondary'}>
             {
-              'Software developer with 7+ years of experience specializing in frontend development with React and Next.js, complemented by strong backend expertise in Python, Django, and PostgreSQL. Proven track record building high-traffic, scalable production applications.'
+              'Senior Software Developer with 7+ years of experience specializing in frontend development with React and Next.js, complemented by strong backend expertise in Python, Django, and PostgreSQL. Proven track record building high-traffic, scalable production applications.'
             }
           </Typography>
 
