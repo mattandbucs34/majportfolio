@@ -46,7 +46,7 @@ const Home = () => {
           <Paper
             elevation={0}
             sx={{
-              p: { xs: 4, md: 6 },
+              p: { xs: 3, sm: 5, md: 6 },
               borderRadius: 4,
               textAlign: 'center',
               bgcolor: 'rgba(0, 0, 0, 0.15)',
@@ -65,9 +65,10 @@ const Home = () => {
             </Typography>
 
             <Stack
-              direction={{ xs: 'column', sm: 'row' }}
+              direction={{ xs: 'column', md: 'row' }}
               spacing={2}
               justifyContent={'center'}
+              alignItems={'center'}
             >
               <Button
                 variant={'contained'}
@@ -80,6 +81,7 @@ const Home = () => {
                   fontWeight: 800,
                   px: 4,
                   py: 1.5,
+                  width: { xs: '100%', md: 'auto' },
                   '&:hover': {
                     bgcolor: '#F1F5F9',
                   },
@@ -101,6 +103,7 @@ const Home = () => {
                   fontWeight: 700,
                   px: 3,
                   py: 1.5,
+                  width: { xs: '100%', md: 'auto' },
                   '&:hover': {
                     borderColor: '#FFFFFF',
                     bgcolor: 'rgba(255, 255, 255, 0.1)',
@@ -123,6 +126,7 @@ const Home = () => {
                   fontWeight: 700,
                   px: 3,
                   py: 1.5,
+                  width: { xs: '100%', md: 'auto' },
                   '&:hover': {
                     borderColor: '#FFFFFF',
                     bgcolor: 'rgba(255, 255, 255, 0.1)',

@@ -97,7 +97,7 @@ const Hero = () => {
             </Typography>
 
             <Stack
-              direction={{ xs: 'column', sm: 'row' }}
+              direction={{ xs: 'column', md: 'row' }}
               spacing={2}
               justifyContent={{ xs: 'center', lg: 'flex-start' }}
               alignItems={'center'}
@@ -113,7 +113,7 @@ const Hero = () => {
                   px: 3.5,
                   py: 1.5,
                   fontSize: '1rem',
-                  width: { xs: '100%', sm: 'auto' },
+                  width: { xs: '100%', md: 'auto' },
                   boxShadow: '0 4px 14px rgba(79, 70, 229, 0.35)',
                 }}
               >
@@ -133,7 +133,7 @@ const Hero = () => {
                   px: 3,
                   py: 1.5,
                   fontSize: '1rem',
-                  width: { xs: '100%', sm: 'auto' },
+                  width: { xs: '100%', md: 'auto' },
                 }}
               >
                 {'Download Resume'}
@@ -150,7 +150,7 @@ const Hero = () => {
                 sx={{
                   fontWeight: 700,
                   fontSize: '1rem',
-                  width: { xs: '100%', sm: 'auto' },
+                  width: { xs: '100%', md: 'auto' },
                 }}
               >
                 {'LinkedIn'}
