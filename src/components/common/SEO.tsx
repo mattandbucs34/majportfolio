@@ -7,11 +7,11 @@ interface SEOProps {
   type?: string;
 }
 
-const SEO = ({ 
-  title, 
-  description = 'Full-Stack Software Developer specializing in React and Python.', 
-  name = 'Matthew A Johnson', 
-  type = 'website' 
+const SEO = ({
+  title,
+  description = 'Senior Full-Stack Software Developer specializing in React and Python.',
+  name = 'Matthew A Johnson',
+  type = 'website'
 }: SEOProps) => {
   useEffect(() => {
     // Basic Title
@@ -27,7 +27,7 @@ const SEO = ({
     // Open Graph
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', title || baseTitle);
-    
+
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) ogDescription.setAttribute('content', description);
 
